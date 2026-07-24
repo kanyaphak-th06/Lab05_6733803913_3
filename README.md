@@ -155,6 +155,6 @@ When the application starts, it contains the following sample data:
 
 ## Author
 
-**Name:** Kanyaphak Thongwiset
+**Name:** Kanyaphak Thongwised
 
 **GitHub:** kanyaphak-th06
