@@ -1,54 +1,41 @@
-# Coffee Menu Service
+# ☕ Coffee Menu Service
 
-A simple REST API for managing a coffee menu using Spring Boot.
-
-## Features
-
-- Get all coffee menus
-- Get coffee by ID
-- Create a new coffee menu
-- Update coffee information
-- Delete a coffee menu
+A simple REST API for managing coffee menus, developed with **Spring Boot**.  
+This project demonstrates the basic CRUD operations (Create, Read, Update, Delete) for a coffee menu.
 
 ---
 
-## Technologies
+## 📌 Features
 
-- Java
-- Spring Boot
-- Maven
-- REST API
-- JSON
+- 📋 Get all coffee menus
+- 🔍 Get a coffee menu by ID
+- ➕ Create a new coffee menu
+- ✏️ Update an existing coffee menu
+- 🗑️ Delete a coffee menu
 
 ---
 
-## Project Structure
+## 🚀 How to Run
 
-```
-src
-└── main
-    └── java
-        └── com.example.coffee_menu_service
-            ├── controller
-            │   └── CoffeeController.java
-            ├── model
-            │   └── Coffee.java
-            ├── service
-            │   └── CoffeeService.java
-            └── CoffeeMenuServiceApplication.java
+1. Clone this repository
+
+```bash
+git clone https://github.com/kanyaphak-th06/Lab05_6733803913_3.git
 ```
 
----
+2. Go to the project directory
 
-## How to Run
+```bash
+cd Lab05_6733803913_3
+```
 
-Run the project using Maven:
+3. Run the application
 
 ```bash
 mvn spring-boot:run
 ```
 
-The server will start at:
+4. The server will start at
 
 ```
 http://localhost:8080
@@ -56,11 +43,17 @@ http://localhost:8080
 
 ---
 
-# API Examples
+# 📖 API Examples
 
-## 1. Get All Coffees
+## 1️⃣ Get All Coffees
 
-**Request**
+**Endpoint**
+
+```
+GET /coffees
+```
+
+**cURL**
 
 ```bash
 curl http://localhost:8080/coffees
@@ -68,9 +61,15 @@ curl http://localhost:8080/coffees
 
 ---
 
-## 2. Get Coffee By ID
+## 2️⃣ Get Coffee by ID
 
-**Request**
+**Endpoint**
+
+```
+GET /coffees/{id}
+```
+
+**Example**
 
 ```bash
 curl http://localhost:8080/coffees/1
@@ -78,11 +77,15 @@ curl http://localhost:8080/coffees/1
 
 ---
 
-## 3. Create Coffee
+## 3️⃣ Create a New Coffee
 
-**Request**
+**Endpoint**
 
-### Windows (Command Prompt)
+```
+POST /coffees
+```
+
+**Windows (Command Prompt)**
 
 ```bash
 curl -X POST http://localhost:8080/coffees ^
@@ -90,21 +93,26 @@ curl -X POST http://localhost:8080/coffees ^
 -d "{\"name\":\"Cappuccino\",\"price\":60.0}"
 ```
 
-### Linux / macOS
+**Request Body**
 
-```bash
-curl -X POST http://localhost:8080/coffees \
--H "Content-Type: application/json" \
--d '{"name":"Cappuccino","price":60.0}'
+```json
+{
+  "name": "Cappuccino",
+  "price": 60.0
+}
 ```
 
 ---
 
-## 4. Update Coffee
+## 4️⃣ Update Coffee
 
-**Request**
+**Endpoint**
 
-### Windows (Command Prompt)
+```
+PUT /coffees/{id}
+```
+
+**Windows (Command Prompt)**
 
 ```bash
 curl -X PUT http://localhost:8080/coffees/2 ^
@@ -112,19 +120,26 @@ curl -X PUT http://localhost:8080/coffees/2 ^
 -d "{\"name\":\"Latte\",\"price\":50.0}"
 ```
 
-### Linux / macOS
+**Request Body**
 
-```bash
-curl -X PUT http://localhost:8080/coffees/2 \
--H "Content-Type: application/json" \
--d '{"name":"Latte","price":50.0}'
+```json
+{
+  "name": "Latte",
+  "price": 50.0
+}
 ```
 
 ---
 
-## 5. Delete Coffee
+## 5️⃣ Delete Coffee
 
-**Request**
+**Endpoint**
+
+```
+DELETE /coffees/{id}
+```
+
+**Example**
 
 ```bash
 curl -X DELETE http://localhost:8080/coffees/3
@@ -132,9 +147,9 @@ curl -X DELETE http://localhost:8080/coffees/3
 
 ---
 
-## Initial Data
+## 🧪 Initial Sample Data
 
-When the application starts, it contains the following sample data:
+When the application starts, the following coffee menu is available:
 
 ```json
 [
@@ -153,8 +168,8 @@ When the application starts, it contains the following sample data:
 
 ---
 
-## Author
+## 👩‍💻 Author
 
-**Name:** Kanyaphak Thongwised
+**Name:** Kanyaphak Thongwiset
 
-**GitHub:** kanyaphak-th06
+**GitHub:** https://github.com/kanyaphak-th06
