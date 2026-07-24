@@ -1,41 +1,41 @@
 # ☕ Coffee Menu Service
 
-A simple REST API for managing coffee menus, developed with **Spring Boot**.  
-This project demonstrates the basic CRUD operations (Create, Read, Update, Delete) for a coffee menu.
+ระบบ REST API สำหรับจัดการเมนูกาแฟ พัฒนาด้วย **Spring Boot**  
+โดยรองรับการทำงานแบบ CRUD (Create, Read, Update, Delete) สำหรับจัดการข้อมูลเมนูกาแฟ
 
 ---
 
-## 📌 Features
+## 📌 ความสามารถของระบบ
 
-- 📋 Get all coffee menus
-- 🔍 Get a coffee menu by ID
-- ➕ Create a new coffee menu
-- ✏️ Update an existing coffee menu
-- 🗑️ Delete a coffee menu
+- 📋 แสดงรายการเมนูกาแฟทั้งหมด
+- 🔍 ค้นหาเมนูกาแฟตาม ID
+- ➕ เพิ่มเมนูกาแฟใหม่
+- ✏️ แก้ไขข้อมูลเมนูกาแฟ
+- 🗑️ ลบเมนูกาแฟ
 
 ---
 
-## 🚀 How to Run
+## 🚀 วิธีการรันโปรเจกต์
 
-1. Clone this repository
+1. Clone Repository
 
 ```bash
 git clone https://github.com/kanyaphak-th06/Lab05_6733803913_3.git
 ```
 
-2. Go to the project directory
+2. เข้าไปยังโฟลเดอร์โปรเจกต์
 
 ```bash
 cd Lab05_6733803913_3
 ```
 
-3. Run the application
+3. รันโปรเจกต์ด้วย Maven
 
 ```bash
 mvn spring-boot:run
 ```
 
-4. The server will start at
+เมื่อรันสำเร็จ ระบบจะทำงานที่
 
 ```
 http://localhost:8080
@@ -43,11 +43,11 @@ http://localhost:8080
 
 ---
 
-# 📖 API Examples
+# 📖 ตัวอย่างการเรียกใช้งาน API
 
-## 1️⃣ Get All Coffees
+## 1. แสดงเมนูกาแฟทั้งหมด
 
-**Endpoint**
+**Method**
 
 ```
 GET /coffees
@@ -61,15 +61,15 @@ curl http://localhost:8080/coffees
 
 ---
 
-## 2️⃣ Get Coffee by ID
+## 2. แสดงเมนูกาแฟตาม ID
 
-**Endpoint**
+**Method**
 
 ```
 GET /coffees/{id}
 ```
 
-**Example**
+**ตัวอย่าง**
 
 ```bash
 curl http://localhost:8080/coffees/1
@@ -77,15 +77,15 @@ curl http://localhost:8080/coffees/1
 
 ---
 
-## 3️⃣ Create a New Coffee
+## 3. เพิ่มเมนูกาแฟใหม่
 
-**Endpoint**
+**Method**
 
 ```
 POST /coffees
 ```
 
-**Windows (Command Prompt)**
+**cURL (Windows Command Prompt)**
 
 ```bash
 curl -X POST http://localhost:8080/coffees ^
@@ -104,15 +104,15 @@ curl -X POST http://localhost:8080/coffees ^
 
 ---
 
-## 4️⃣ Update Coffee
+## 4. แก้ไขข้อมูลเมนูกาแฟ
 
-**Endpoint**
+**Method**
 
 ```
 PUT /coffees/{id}
 ```
 
-**Windows (Command Prompt)**
+**cURL (Windows Command Prompt)**
 
 ```bash
 curl -X PUT http://localhost:8080/coffees/2 ^
@@ -131,15 +131,15 @@ curl -X PUT http://localhost:8080/coffees/2 ^
 
 ---
 
-## 5️⃣ Delete Coffee
+## 5. ลบเมนูกาแฟ
 
-**Endpoint**
+**Method**
 
 ```
 DELETE /coffees/{id}
 ```
 
-**Example**
+**ตัวอย่าง**
 
 ```bash
 curl -X DELETE http://localhost:8080/coffees/3
@@ -147,9 +147,9 @@ curl -X DELETE http://localhost:8080/coffees/3
 
 ---
 
-## 🧪 Initial Sample Data
+## 🧪 ข้อมูลเริ่มต้นของระบบ
 
-When the application starts, the following coffee menu is available:
+เมื่อเริ่มต้นระบบ จะมีข้อมูลเมนูกาแฟตัวอย่างดังนี้
 
 ```json
 [
@@ -165,11 +165,3 @@ When the application starts, the following coffee menu is available:
   }
 ]
 ```
-
----
-
-## 👩‍💻 Author
-
-**Name:** Kanyaphak Thongwiset
-
-**GitHub:** https://github.com/kanyaphak-th06
