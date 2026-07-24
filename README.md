@@ -163,7 +163,7 @@ curl -X POST http://localhost:8080/coffees ^
 
 ---
 
-# 4. Update Coffee
+# 4. PUT Update
 
 แก้ไขข้อมูลเมนูกาแฟ
 
